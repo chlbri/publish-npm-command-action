@@ -6,10 +6,14 @@ async function run(): Promise<void> {
   try {
     debug(`Start ...`);
     debug(new Date().toTimeString());
-    const inputPath = getInput('path');
+    const inputPath = getInput('path', { required: false });
+    debug(`inputPath: ${inputPath}`);
     const path = checkPath(inputPath) ? inputPath : undefined;
+    debug(`path: ${path}`);
 
     const { command, version } = await buildCommand(path);
+    debug(`command: ${command}`);
+    debug(`version: ${version}`);
 
     setOutputs({ command, version });
     debug(new Date().toTimeString());
