@@ -1,4 +1,4 @@
-name: 'Your name here'
+name: @bemedev/npm-publish-command
 description: Template for future gh-actions
 author: chlbri
 icon: arrow-up-circle
