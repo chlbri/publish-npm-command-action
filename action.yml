@@ -1,7 +1,9 @@
-name: @bemedev/npm-publish-command
+name: bemedev/npm-publish-command
 description: Template for future gh-actions
 author: chlbri
-icon: arrow-up-circle
+branding:
+  icon: 'arrow-up-circle'
+  color: 'orange'
 inputs:
   path: # change this
     required: false
