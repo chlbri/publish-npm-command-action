@@ -54,9 +54,13 @@ function run() {
         try {
             (0, core_1.debug)(`Start ...`);
             (0, core_1.debug)(new Date().toTimeString());
-            const inputPath = (0, core_1.getInput)('path');
+            const inputPath = (0, core_1.getInput)('path', { required: false });
+            (0, core_1.debug)(`inputPath: ${inputPath}`);
             const path = (0, helpers_1.checkPath)(inputPath) ? inputPath : undefined;
+            (0, core_1.debug)(`path: ${path}`);
             const { command, version } = yield (0, publish_command_1.default)(path);
+            (0, core_1.debug)(`command: ${command}`);
+            (0, core_1.debug)(`version: ${version}`);
             (0, helpers_1.setOutputs)({ command, version });
             (0, core_1.debug)(new Date().toTimeString());
             (0, core_1.debug)('Done!');
