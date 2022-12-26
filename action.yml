@@ -1,6 +1,7 @@
 name: 'Your name here'
 description: Template for future gh-actions
 author: chlbri
+icon: arrow-up-circle
 inputs:
   path: # change this
     required: false
