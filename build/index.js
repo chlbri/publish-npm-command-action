@@ -63,7 +63,7 @@ function run() {
             (0, core_1.debug)(`version: ${version}`);
             (0, helpers_1.setOutputs)({ command, version });
             (0, core_1.debug)(new Date().toTimeString());
-            (0, core_1.debug)('Done!');
+            (0, core_1.debug)('... Done!');
         }
         catch (error) {
             if (error instanceof Error)
