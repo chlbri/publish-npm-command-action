@@ -1,8 +1,17 @@
 {
   "name": "@bemedev/npm-publish-command-action",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "private": true,
-  "description": "TypeScript template action",
+  "author": {
+    "name": "chlbri",
+    "email": "bri_lvi@icloud.com",
+    "url": "https://bemedev.vercel.app"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/chlbri/publish-npm-command-action.git"
+  },
+  "description": "Build npm command and publish according to commit subject",
   "main": "lib/main.js",
   "scripts": {
     "build": "rm -rf lib && tsc",
@@ -21,19 +30,13 @@
     "husky": "husky install",
     "prepare": "husky install"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/actions/typescript-action.git"
-  },
   "keywords": [
-    "actions",
-    "node",
-    "setup"
+    "npm",
+    "publish"
   ],
   "engines": {
     "node": ">=16"
   },
-  "author": "",
   "license": "MIT",
   "dependencies": {
     "@actions/core": "^1.10.0",
