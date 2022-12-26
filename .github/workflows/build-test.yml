@@ -62,20 +62,19 @@ jobs:
       - name: Use the action
         uses: ./
         id: testt
-        with:
-          milliseconds: 1000
 
       - name: Test the output time
         uses: actions/github-script@v6
         env:
-          TIME: ${{ steps.testt.outputs.time }}
+          COMMAND: ${{ steps.testt.outputs.command }}
+          VERSION: ${{ steps.testt.outputs.version }}
         with:
           script: |
-            if(!process.env.TIME || process.env.TIME === 'undefined')
+            if(!process.env.VERSION || process.env.VERSION === 'undefined')
             {
-              core.setFailed('TIME is undefined');
+              core.setFailed('VERSION is undefined');
             }
             else
             {
-              console.log(process.env.TIME);
+              console.log(process.env.VERSION);
             }

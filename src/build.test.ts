@@ -6,10 +6,9 @@ import { test } from 'vitest';
 test('test runs', () => {
   const exec = process.execPath;
   const path = join(__dirname, '..', 'build', 'index.js');
+  const INPUT_PATH = `${process.cwd()}/package.test.json`;
   const options: ExecFileSyncOptions = {
-    env: {
-      INPUT_MILLISECONDS: '500',
-    },
+    env: { INPUT_PATH },
   };
   console.log(execFileSync(exec, [path], options).toString());
 });

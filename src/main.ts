@@ -1,18 +1,19 @@
 import { debug, getInput, setFailed } from '@actions/core';
-import { setOutputs } from './helpers';
-import { wait } from './wait';
+import buildCommand from '@bemedev/publish-command';
+import { checkPath, setOutputs } from './helpers';
 
 async function run(): Promise<void> {
   try {
-    const ms: string = getInput('milliseconds');
-    debug(`Waiting ${ms} milliseconds ...`);
-
+    debug(`Start ...`);
     debug(new Date().toTimeString());
-    await wait(parseInt(ms, 10));
-    const time = new Date().toTimeString();
-    debug(time);
+    const inputPath = getInput('path');
+    const path = checkPath(inputPath) ? inputPath : undefined;
 
-    setOutputs({ time });
+    const { command, version } = await buildCommand(path);
+
+    setOutputs({ command, version });
+    debug(new Date().toTimeString());
+    debug('Done!');
   } catch (error) {
     if (error instanceof Error) setFailed(error.message);
   }

@@ -1,5 +1,5 @@
 {
-  "name": "typescript-action",
+  "name": "@bemedev/npm-publish-command-action",
   "version": "0.0.0",
   "private": true,
   "description": "TypeScript template action",
@@ -35,7 +35,8 @@
   "author": "",
   "license": "MIT",
   "dependencies": {
-    "@actions/core": "^1.10.0"
+    "@actions/core": "^1.10.0",
+    "@bemedev/publish-command": "^0.0.3"
   },
   "devDependencies": {
     "@types/node": "^18.11.17",
@@ -43,6 +44,7 @@
     "@typescript-eslint/parser": "^5.47.0",
     "@vercel/ncc": "^0.36.0",
     "eslint": "^8.30.0",
+    "husky": "^8.0.0",
     "js-yaml": "^4.1.0",
     "onchange": "^7.1.0",
     "prettier": "2.8.1",
@@ -51,7 +53,6 @@
     "typescript": "^4.9.4",
     "vite": "3.2.4",
     "vite-tsconfig-paths": "^4.0.3",
-    "vitest": "0.25.2",
-    "husky": "^8.0.0"
+    "vitest": "0.25.2"
   }
 }
