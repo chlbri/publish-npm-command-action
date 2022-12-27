@@ -6,8 +6,8 @@
 
 For commit publishing. 
 It looks at your commit, change your package version with the start of your commit subject ("major", "minor", "patch").
-Also the action generates a npm publish command for beta an aplha version. ALso at the beginning of your lat commit, if you write "beta" or "alpha",
-it will generate "npm publish --access pnulic --{beta/alpha}".
+Also the action generates a npm publish command for beta an aplha version. Also at the beginning of your last commit, if you write "beta" or "alpha",
+it will generate "npm publish --access public --{beta/alpha}".
 
 NB: Don't forget to configure your CI environment with actions/setup according to your will.
 
